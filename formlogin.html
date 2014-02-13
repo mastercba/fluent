@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>FluentSpeaking</title>
+
+	<link rel="stylesheet" type="text/css" href="frontend/css/normalize.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" type="text/css" href="frontend/css/logged.css"/>
+	<link rel="shortcut icon" href="frontend/img/favicon.ico">
+
+	<script src="frontend/js/prefixfree.min.js"></script>
+	<script src="frontend/js/jquery.js"></script>
+	<script src="frontend/js/fluent.js"></script>
+</head>
+
+<body>
+	<header>
+		
+	</header>
+	<!-- MAIN CONTENT -->
+	<section>
+		<div id="logo_login"><!--<logo>-->
+			<a style="text-decoration: none; margin-left: 12px;" href="http://www.fluentspeaking.com" title="FluentSpeaking">
+			    <img style="margin-top: 2px;" src="frontend/img/logo.png" alt="FS-logo" width="200" height="45">
+			</a>
+		</div>
+		<div id="box_login">
+			<form action="/fluent/backend/login.php" method="post">
+				<input type="text" id="user" placeholder="User" name="username" size="20px" autofocus/></br>
+			    <input type="password" id="password" placeholder="Password" name="password" size="20px"/></br>
+			    <button type="submit" id="submit">Login</button>					
+			</form>
+			<!--<h1>need help?</h1>-->
+		</div>
+	</section>	
+
+	<footer> <!--footer-->
+		<div id="footer_wrap"> 
+			<div id="footer_content">
+				<div class="logo-tel">
+					
+				</div>	
+				<div class="social-icons">
+					<div id="iconos">	
+					</div>	
+				</div>
+				<div class="copy">
+					<p id="fs-copyright">
+					    Copyright © 2013 FluentSpeaking. Todos los derechos reservados.
+					</p>
+				</div>
+			</div>	
+		</div>		
+	</footer>
+
+</body>
+</html>
