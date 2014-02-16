@@ -4,6 +4,10 @@ body
 	font-family: "Open Sans",Arial;
 	font-size: 16px;
 	text-align: center;
+	position:absolute;
+        top:0;
+        left:0;
+        height:600px;
 }
 header
 {
@@ -21,18 +25,20 @@ header
 }
 /*--------------------------LOGO---------------------------*/
 #logo{
-	margin: 0 0 0 13em;
-	float: left;	
-}
-#logo, #lang
-{
+	margin: 0 0 0 -43em;
+/*	float: left;*/	
 	display: inline-block;
+}
+/*#logo
+{
+	
 	vertical-align: top;
 }
+*/
 #logolangua{
 	display: inline-block;
 	/*float: right;*/
-	margin: 5em -30em 0 0;
+	margin: 1em 0 0 35em;
 	/*padding: 0;*/
 	/*width: 10%;*/
 }
@@ -43,7 +49,7 @@ header
 {
 	/*float: right;*/
 	font-size: 0.7em;
-	margin: 0 0 0 57em;
+	margin: 0 0 0 55em;
 	padding: 0;
 		/*list-style: none;*/
 	width: 45%;
@@ -52,8 +58,8 @@ header
 {
 	color: #2F3192;	
 	text-decoration: none;
+	padding: 1px 5px;			/*espacios del submenu superior*/
 	display: inline-block;
-	padding: 1px 5px;					/*espacios del submenu superior*/
 }
 #menu a:hover
 {
@@ -65,7 +71,11 @@ header
 }
 
 /*-------------------------Phone---------------------------*/
-#phone {clear: both; width: 223px; margin: 0 0 0 -15em;}
+#phone {
+ /*width: 223px; */
+ margin: 0 0 0 -45em;
+display: block;
+}
 #phone span {
 font-size: 0.8em;
 color: black;
@@ -74,21 +84,22 @@ vertical-align: baseline;
 #phone img {margin-right: 13px;margin-left: 10px;}
 #phone, #info
 {
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 }
 			/*--------------------------info---------------------------*/
 			#info {	
-				float: right;
-				font-size: 0.8em;
-				margin: 0 18em 0 0;
+				/*float: right;*/
+				font-size: 0.8em;				
 				background-color: #595F73;			/*#3F0084;*/
 				border-radius: 2px;	
 				-moz-border-radius: 2px;
 				-webkit-border-radius: 2px;
 				padding: 5px 5px 5px 5px;          /*o padding: 5px;*/
 				color: #FFF;
-				width: 250px;
+				width: 250px;		
+				margin: 0 18em 0 65em;
+				display: inline-block;		
 			}
 			#info a {
 				color: #FFF;
@@ -139,10 +150,10 @@ vertical-align: baseline;
 /*--------------------cambio de idioma---------------------*/
 #lang 
 {
-	float: right;
-	margin: 1em 13em 0 0;
-	padding: 0;
-	width: 10%;
+	/*float: right;*/
+	margin: -3em 0 0 45em;
+	display: block;
+	/*width: 10%;*/
 }
 
 
@@ -317,6 +328,10 @@ nav ul li a:hover
 /*}*/
 
 /*------------------------Banner---------------------------*/
+#banner{
+    display: block;
+	margin: -2em 0 0 0;
+}
 #fotos
 {
 	background: #595F73;				/*rgba(0, 0, 0, 0.4);			#D23D15*/
@@ -328,7 +343,7 @@ nav ul li a:hover
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
 	width: 900px;
-	height: 220px;		
+	height: 220px;
 }
 #fotos>div{display:none}
 h3
@@ -519,6 +534,9 @@ p {
 footer
 {
 	margin-top: 4em;
+	height: 47px;
+	text-align: left;
+	padding: 10px;
 }
 #footer_wrap {
 	background: #242424;
@@ -526,7 +544,7 @@ footer
 	margin-top: 30px;
 	width: 100%;
 	overflow: hidden;
-	display: block;
+	display: inline-block;
 }
 #footer_content{
 	position: relative;
@@ -535,7 +553,7 @@ footer
 	width: 980px;	
 }
 /*logo+tel*/
-.logo-tel{ margin: 0 0 0 -30em;}
+.logo-tel{ margin: 0 0 0 -1em;}
 #footer_logo_img {
 	background: url("../img/logo_footer.png") 15px 0 no-repeat;
 	float: left;
@@ -571,6 +589,7 @@ footer
 }
 .social-icons{
 	float: right;
+		margin: -5em 0 0 0;
 }
 footer .social-icons #letras {
 	background: url("../img/social.png") no-repeat;
@@ -591,7 +610,7 @@ footer .social-icons #letras {
 }
 .logo-tel, .social-icons
 {
-	display: inline-block;
+      	/*display: inline-block;*/
 	vertical-align: top;
 }
 /*copyright*/
@@ -619,7 +638,7 @@ h5
 	/*background: url("../img/linea.jpg") no-repeat 50% 100%;*/
 
 	padding-bottom: 0.2em;
-	margin: 0 0 2em 0;
+	margin: 0em 12em 2em 11em;
     display: inline-block;
 	width: 980px;
 	border-top: 1px dotted #949494;
@@ -825,7 +844,7 @@ h6
 	transition: all 0.5s ease;
 	width: 500px;
 	height: 450px;
-	margin: 0 1em 0 0; padding: 2em 3em 0 3em;} 
+	margin: 1em 7em 0em 4em; padding: 2em 3em 0 3em;} 
 .soporte #columna_der{	display: inline-block;
 	border-top: 1px solid #ddd;
 	border-left: 1px solid #ddd;
@@ -839,7 +858,7 @@ h6
 	font-size: 0.8em;
 	text-align: left;
 	width: 250px;
-	height: 250px;
+	height: 350px;
 	margin: 0; padding: 0;}
 .soporte #columna_izq, .soporte #columna_der
 {
@@ -848,10 +867,10 @@ h6
 }
 .soporte #top_title{
 	background-size: 901px 61px;
-	padding: 1em 0 0.2em 3em;
+	padding: 1em 0em 0em 2em;
 	overflow: hidden;
-	/*width: 900px;*/
-	/*margin: 0 auto;
+	/*width: 900px;
+	margin: 0em 11em 0em 14em;
 	text-align: left;*/
 }	
 /*.soporte #columna_izq #soporte span{padding: 3em 0 0 3em;}*/
@@ -895,10 +914,10 @@ h6
 #top_title{
 	background-size: 901px 61px;
 	padding-bottom: 0.6em;
-	padding: 1em 0 0.2em 2em;
+	padding: 1em 3em 1em 5em;
 	overflow: hidden;
 	width: 900px;
-	margin: 0 auto;
+	margin: 0em 13em 0em 13em;
 	text-align: left;
 }
 #top_font{

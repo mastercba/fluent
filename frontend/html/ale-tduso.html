@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="al">
+<head>
+	<meta charset="utf-8" />
+	<title>FluentSpeaking</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css"/>
+	<link rel="shortcut icon" href="../img/favicon.ico">
+
+	<script src="../js/prefixfree.min.js"></script>
+	<script src="../js/jquery.js"></script>
+	<!--<script src="js/codiguito.js"></script> -->
+
+	<!--<muestra el banner>-->
+	<script type="text/javascript">
+				$( function(){   
+				    //Muestro el primer div
+				    $("#fotos div:eq(0)").show();
+				    //cada 2 segundo ejecuto la función mostrar()
+				    setInterval("mostrar1()",7000);
+				});
+				mostrar1 = function(){
+				    //Oculto el div que se encuentra vivisble
+				    var div = $("#fotos div:visible").hide();
+				    //Selecciono el siguiente div que oculte en el paso anterior
+				    divNext = div.next();
+				    //Si existe otro div después lo muestro, si no existe quiere decir que es el último, entonces muestro el primero para que la próxima vez que se ejecute la función continue con el segundo
+				    if(divNext.length){
+				        divNext.show();
+				    } else {
+				        $("#fotos div:eq(0)").show();
+				    }
+				};
+	</script>
+
+	<!--<muestra el testimonio>-->
+	<script type="text/javascript">
+				$( function(){   
+				    //Muestro el primer div
+				    $("#columnas div:eq(0)").show();
+				    //cada 2 segundo ejecuto la función mostrar()
+				    setInterval("mostrar()",5000);
+				});
+				mostrar = function(){
+				    //Oculto el div que se encuentra vivisble
+				    var div = $("#columnas div:visible").hide();
+				    //Selecciono el siguiente div que oculte en el paso anterior
+				    divNext = div.next();
+				    //Si existe otro div después lo muestro, si no existe quiere decir que es el último, entonces muestro el primero para que la próxima vez que se ejecute la función continue con el segundo
+				    if(divNext.length){
+				        divNext.show();
+				    } else {
+				        $("#columnas div:eq(0)").show();
+				    }
+				};
+	</script>
+
+	<!--<formulario para information>-->
+	<script>
+		$(document).ready(function() {
+		    $('#showlogin').click(function() {
+		        $('#loginpanel').slideToggle('fast', function() {
+		            $("#triangle_down").toggle(); 
+		            $("#triangle_up").toggle();
+		        });
+		    });
+			$('#nombre').focus(function(){  
+				$(this).val('');   
+			});  
+			$('#apellido').focus(function(){  
+				$(this).val('');  
+			});
+			$('#email').focus(function(){  
+				$(this).val('');  
+			});
+			$('#deseo').focus(function(){  
+				$(this).val('');  
+			});
+		});
+	</script>
+
+</head>
+
+<body class="pp">
+	<header>
+		<div id="up_menu"><!--<menu superior>-->
+				<div id="menu">
+			    	<a href="ale-soporte.html"> Kontaktieren Sie uns </a>|
+			    	<a href="ale-qsomos.html"> Über uns </a>|
+			    	<!--<a href="certifica.html"> Certificaciones </a>|-->
+			    	<a href="#" id="actual_top"> Datenschutz </a>|
+			    	<a href="../../formlogin.html"> Geben Sie </a>
+				</div>        
+			</div>
+
+		<div id="logo"><!--<logo>-->
+			<a style="text-decoration: none; margin-left: 12px;" href="http://www.fluentspeaking.com" title="FluentSpeaking">
+			    <img style="margin-top: 2px;" src="../img/logo_last.png" alt="FS-logo">
+			</a>
+		</div>
+
+		<div id="lang"><!--<cambio de idioma>-->
+			<div id="lang-wrapper">
+			    <a style=" text-decoration: none; margin-left: 12px;" href="../../index.php" title="Aleman">
+			        <img style="margin-top: 2px; " src="../img/de.png" width="18" height="18" alt="Deutsch-logo">
+			    </a>
+			    <a style=" text-decoration: none;margin-left: 8px;" href="../../indexen.php" title="Ingles">
+			        <img style="margin-top: 2px; opacity:0.2;" src="../img/uk.png" width="18" height="18" alt="Englisch-logo">
+			    </a>
+			    <a style=" text-decoration: none; margin-left: 5px;" href="../../indexes.php" title="Español">
+			        <img style="margin-top: 2px; opacity:0.2;" src="../img/sp.png" width="20" height="20" alt="Español-logo">
+			    </a>
+			</div>        
+		</div>
+
+		<div id="logolangua"><!--<languacom group>-->
+			
+			<a href="http://www.languacom.de"><img src="../img/logolanguagroup.png"></a>
+		</div>
+		
+		<hgroup><!--<menu>-->
+				<nav>
+					<ul>
+						<li><a href="../../index.php">Einleitung</a></li>
+						<li><a href="../html/ale-funciona.html" >Wie es funktioniert</a></li>
+						<li><a href="#">Deutsch-Kurs</a>
+							<ul>
+								<li><a href="../html/ale-alestesp.html">Students</a></li>
+								<li><a href="../html/ale-alprivesp.html">Privat</a></li>
+								<li><a href="../html/ale-alempesp.html">Firmen</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Englisch-Kurs</a><!--<ensp.html>-->
+							<ul>
+								<li><a href="../html/ale-examenes.html">Prüfungsvorbereitung</a></li>
+								<li><a href="../html/ale-inestesp.html">Students</a></li>
+								<li><a href="../html/ale-inprivesp.html">Privat</a></li>
+								<li><a href="../html/ale-inempesp.html">Firmen</a></li>
+							</ul>
+						</li>	
+						<li><a href="#">Spanischkurs</a>
+							<ul>
+								<li><a href="../html/ale-espturesp.html">Spanisch für den Tourismus</a></li>
+								<li><a href="../html/ale-espestesp.html">Students</a></li>
+								<li><a href="../html/ale-espprivesp.html">Privat</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Französisch-Kurs</a>
+							<ul>
+								<li><a href="../html/ale-frestesp.html">Students</a></li>
+								<li><a href="../html/ale-frprivesp.html">Privat</a></li>
+							</ul>
+						</li>
+					</ul>	
+				</nav>
+			</hgroup>
+		
+	</header>
+
+	<section>
+		<div id="top_title">
+			<h15 id="top_font">Datenschutz</h15>
+		</div>
+
+		<article id="legal_1">
+			<div id="pp2">
+				<p>FluentSpeaking (der "Service") ist eine Live-Sprachunterricht Dienstleister über VoIP und Online, erhältlich von FluentSpeaking und das deutsche Unternehmen LANGUACOM Management Academy for Global Communication GbR entweder online über unsere Internetseiten unter www.FluentSpeaking.com, www.languacom.com oder über unsere mobile Anwendung. FluentSpeaking bietet Benutzern die Möglichkeit, Live Language Training Service durch eine personalisierte Language Teacher und Online Sprache Teaching Support durch die "FluentSpeaking Online Language Teaching Centre" zu integrieren. Es ermöglicht Benutzern, mit ihren Live-Lehrer über VoIP und Chat, um Informationen über ihre Sprachkurs teilen zu kommunizieren, um seinen eigenen Blog schreiben, um wertvolle Informations-Updates über den Fortschritt ihrer Sprache / Communication Skills durch Online Sprachtests und Bedarfsanalyse erhalten, zu Online-Materialien, wie z. B. Multimedia, Video-und Audio-Material im Zusammenhang mit dem Sprachkurs erhalten.</p>
+			</div>	
+			<h4>Einführung</h4>
+			<div id="pp2">
+				<p>Wir respektieren Ihre Privatsphäre und verpflichtet sind, sie zu schützen. Bitte nehmen Sie sich einen Moment Zeit, um sich mit unserem Datenschutz-Praktiken vertraut zu machen. Durch den Zugriff auf den Dienst, akzeptieren Sie unsere Datenschutz-Praktiken, wie sie in dieser Datenschutzerklärung genannten.</p>
+			</div>
+			<div id="pp2">
+				<p>Diese Aussage beschreibt die Informationen, die wir sammeln und wie diese Daten von uns verwendet werden. Diese Aussage bezieht sich nicht auf Informationen, die wir sammeln, durch eine andere Methode anwenden, oder Informationen über andere Unternehmen oder Drittanbieter-Website, die eine Verknüpfung kann oder zugänglich sein aus dem Service gesammelt. Wir empfehlen Ihnen, über die Datenschutz-Praktiken dieser Dritten zu lernen.</p>
+			</div>
+			<div id="pp2">
+				<p>Unsere Server und Rechenzentren für den Service in Deutschland und den USA befinden Wenn Sie den Zugriff auf den Service außerhalb von Deutschland oder den USA, erklären Sie, dass Ihre persönlichen Informationen, um Deutschland oder den USA, eine Gerichtsbarkeit, die haben verschieden sein können übertragen werden Datenschutz und Datensicherheit Schutz als die eigene Gerichtsbarkeit, verarbeitet und gespeichert werden.</p>
+			</div>
+			<h4>Sammlung von persönlichen Informationen</h4>
+			<div id="pp2">
+				<p>Personenbezogene Daten sind Daten, die verwendet werden, um eindeutig zu identifizieren oder kontaktieren Sie eine einzelne Person werden kann. Wir sammeln verschiedene Arten von persönlichen Informationen von und über die Nutzer des Service, einschließlich:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Personal information you provide to us when you register for the Service, such as your name and email address;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Personal information provided to us prior to your registration with the Service by a Language Teaching company (such as a Partner Language Institute, Private or State School or Customer´s company, etc.) with which you have arranged the language course;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Persönliche Informationen, die Sie uns zur Verfügung stellen, wenn Sie sich für den Service, wie z. B. Ihren Namen und Email-Adresse;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Wenn Sie uns kontaktieren, persönlichen Informationen, die Sie uns zur Verfügung stellen, dass die Einzelheiten der Art Ihrer Frage oder ein Problem.</p>
+			</div>
+				<h4>Verwendung personenbezogener Daten</h4>
+
+
+
+
+
+			<div id="pp2">
+				<p>Wir verwenden personenbezogene Informationen in den folgenden Möglichkeiten:</p>
+			</div>
+			<div id="pp2">
+				<p>•  Um den Dienst und seine Inhalte in geeigneter und wirksamer Weise für Sie und für Ihren Computer oder mobilen Gerät zu präsentieren;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Um Ihnen Informationen, Produkte oder Dienstleistungen, die Sie von uns anfordern;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Um Sie über Änderungen an den Service zu benachrichtigen und</p>
+			</div>
+			<div id="pp2">
+				<p>•	Damit Sie die Language Teaching Integration, Sharing und Messaging-Funktionen des Service, ob und wann Sie sich dafür entscheiden, zu nutzen.</p>
+			</div>
+			<h4>Weitergabe personenbezogener Informationen an Dritte</h4>
+			<div id="pp2">
+				<p>Wir können von Zeit zu Zeit machen bestimmte persönliche Informationen zur Verfügung zu strategischen Partnern, die mit der Gesellschaft arbeiten wie die folgenden:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Verschiedene Tochtergesellschaften der Gesellschaft, die den Dienst unterstützen;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Dienstleister wir nutzen, um unser Geschäft, die Dienstleistungen wie Informationsverarbeitung bieten Unterstützung, Verwaltung und Verbesserung der Kundendaten, die Bereitstellung von kundenorientierten Service, der Beurteilung über Ihr Interesse an unseren Produkten und Dienstleistungen und die Durchführung von Forschungs-oder Kunden-Umfragen und</p>
+			</div>
+			<div id="pp2">
+				<p>•	Im Falle einer Fusion, Übernahme oder jegliche Form von Verkauf einiger oder aller Vermögenswerte der Gesellschaft, in diesem Fall persönliche Informationen von der Gesellschaft über seine Kunden stattfinden wird unter den Aktiven auf den Käufer übertragen werden.</p>
+			</div>
+			<div id="pp2">
+				<p>•	Wenn Sie uns kontaktieren, persönlichen Informationen, die Sie uns zur Verfügung stellen, dass die Einzelheiten der Art Ihrer Frage oder ein Problem.</p>
+			</div>
+			<div id="pp2">
+				<p>Wir können auch Ihre persönlichen Informationen an Dritte:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Willigen Sie mit einem Gerichtsbeschluss oder andere rechtliche Verpflichtung;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Durchzusetzen oder anzuwenden unseren Nutzungsbedingungen und alle anderen Vereinbarungen oder</p>
+			</div>
+			<div id="pp2">
+				<p>•	Schützen Sie die Rechte, das Eigentum oder die Sicherheit des Unternehmens, unserer Kunden oder andere. Dies kann auch den Austausch von Informationen mit anderen Unternehmen und Organisationen zum Schutz vor Betrug und zur Reduzierung des Kreditrisikos.</p>
+			</div>
+				<h4>Sammlung und Verwendung von nicht-personenbezogene Informationen</h4>
+			<div id="pp2">
+				<p>Wir sammeln auch nicht-personenbezogene Informationen oder Daten in einer Form, die nicht verwendet werden, um eindeutig zu identifizieren oder kontaktieren Sie eine einzelne Person werden. Wir erheben, verwenden, übertragen und offenbaren nicht-personenbezogene Daten für andere Zwecke. Nicht-personenbezogene Informationen, die wir sammeln, können Informationen über Ihre Aktivitäten auf unserer Website oder unserer Anwendung, die aggregiert und kann verwendet werden, um uns helfen, weitere nützliche Informationen zu unseren Kunden und zu verstehen, welche Teile des Dienstes von größtem Interesse sind.</p>
+			</div>
+			<div id="pp2">
+				<p>Wenn wir nicht-personenbezogene Informationen mit personenbezogenen Daten kombinieren die kombinierten Informationen werden als persönlichen Daten für die Zwecke dieser Datenschutzerklärung behandelt werden.</p>
+			</div>
+				<h4>Location Based Services</h4>
+			<div id="pp2">
+				<p>Um standortbezogene Dienste auf mobile Anwendung Nutzern des Dienstes vor, so kann die Gesellschaft oder unsere Partner erheben und verwenden präzise Standortdaten, wie die Echtzeit-geographischen Standort Ihres Geräts. Dieser Ort Daten erfasst anonym in einer Form, die nicht persönlich identifizieren und wird von der Gesellschaft und unseren Partnern zur Standort-basierte Produkte und Dienstleistungen anbieten. Wir behandeln diese Lage Daten als nicht-personenbezogene Informationen.</p>
+			</div>
+				<h4>Cookies und andere Technologien</h4>
+			<div id="pp2">
+				<p>Die FluentSpeaking Website, kann die mobile Anwendung, E-Mail-Nachrichten und Werbung zu verwenden "Cookies" und andere Technologien wie Pixel-Tags und Web Beacons. Diese Technologien helfen Sie uns zu verbessern und einen besseren und persönlicheren Service, indem du uns zu liefern:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Schätzung der Grösse unseres Publikums und Nutzungsmuster;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Bewahren Sie Informationen über Ihre Präferenzen, so dass wir den Service nach Ihren individuellen Interessen anzupassen;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Beschleunigen Sie Ihre Suchanfragen, und</p>
+			</div>
+			<div id="pp2">
+				<p>•	Erkennen Sie, wenn Sie den Service der Online-Webseite zurückkehren.</p>
+			</div>
+			<div id="pp2">
+				<p>Sie können Cookies ablehnen, indem Aktivieren Sie die entsprechenden Einstellungen in Ihrem Browser zu akzeptieren. Erkundigen Sie sich bei Ihrem Provider, um herauszufinden, wie Sie Cookies deaktivieren. Für weitere Informationen darüber, wie wir nutzen Cookies und wie Sie Cookies deaktivieren, finden Sie in unseren unter dem Plätzchen-Politik. Bitte beachten Sie, dass bestimmte Funktionen des Dienstes nicht verfügbar sein, sobald Cookies deaktiviert sind.</p>
+			</div>
+			<div id="pp2">
+				<p>Wir behandeln Informationen, die von Cookies und andere Technologien als nicht-personenbezogene Informationen gesammelt. Doch in dem Maße, Internet Protocol (IP)-Adressen oder ähnliche Kennungen gelten persönlichen Informationen durch lokale Gesetze, behandeln wir diese Kennungen als persönliche Information. Ebenso in dem Maße, dass nicht personenbezogene Daten mit personenbezogenen Daten kombiniert wird, behandeln wir die kombinierten Informationen wie persönlichen Daten für die Zwecke dieser Datenschutzerklärung.</p>
+			</div>
+				<h4>Datensicherheit</h4>
+			<div id="pp2">
+				<p>Wir haben angemessene Maßnahmen entwickelt, um Ihre persönlichen Daten vor versehentlichem Verlust und unbefugtem Zugriff, Nutzung, Veränderung und Offenlegung zu schützen.</p>
+			</div>
+			<div id="pp2">
+				<p>Die Sicherheit Ihrer Daten hängt auch von Ihnen ab. Wir bitten Sie dringend, vorsichtig zu sein über das Geben von Informationen in den öffentlichen Bereichen des Dienstes. Sie verstehen und erkennen, dass auch nach der Entfernung, Kopien Ihrer Inhalte, einschließlich persönlicher Informationen, die Sie dazu beitragen, gemeinsam genutzt werden, veröffentlicht oder angezeigt werden auf dem Service oder übertragen werden, um andere Nutzer des Dienstes, kann bleiben sichtbar in zwischengespeichert und archivierten Seiten könnte oder kopiert wurden oder von anderen Nutzern gespeichert. Trotz Bemühungen, Ihre persönlichen Daten zu schützen, können wir keine Garantie für die Sicherheit Ihrer persönlichen Daten, die der Dienst. Eine Weitergabe von persönlichen Daten erfolgt auf eigene Gefahr.</p>
+			</div>	
+				<h4>Plätzchen-Politik</h4>		
+			<div id="pp2">
+				<p>1.	Was ist ein Cookie?
+				Ein Cookie ist ein Stück von Daten, die auf einem Computer, Tablet oder einem anderen Gerät ("device") verwendet, um im Internet zu surfen, so dass dieses Gerät zu einem späteren Zeitpunkt erkannt werden können gespeichert werden.
+				Es ist Ihre Wahl, ob Sie Cookies auf Ihrem Gerät platziert werden können. Für spezifische Informationen über die Verwaltung und Steuerung von Cookies finden Sie unter Verwalten von Cookies.
+				</p>
+			</div>	
+			<div id="pp2">
+				<p>2.	Unsere Cookies Politik
+				Die TripCase Service (der "Service") versucht, bestimmte Cookies auf Ihrem Gerät zu platzieren, wenn Sie die TripCase Website besuchen. Wir haben für Sie unter den Arten der von uns verwendeten Cookies aufgeführt sind, und was wir sie verwenden für:
+				</p>
+			</div>
+			<div id="pp2">
+				<p>Cookie-Typ Plätzchen Zweck
+				Session-Cookies Diese Cookies werden verwendet, um Ihre Sitzung nachzuverfolgen, wie Sie mit dem Service zu interagieren.
+				Identität Cookies Diese Cookies werden auf Ihren Wunsch eingestellt zu haben, die Anwendung erinnerst du dich das nächste Mal, wenn Sie den Dienst mit dem Gerät.
+				Optimierung Cookies Diese Cookies werden verwendet, um die Nutzung der von uns angebotenen Dienstleistungen zu verfolgen, um die Benutzerfreundlichkeit unserer Service zu verbessern.
+				</p>
+			</div>			
+			<div id="pp2">
+				<p>Um vollständig nutzen den Service, das Gerät so eingestellt ist, dass Cookies akzeptiert werden, wie viel von der Service-Funktionalität funktioniert nur über den Einsatz von Cookies. Cookies platziert, wenn Sie besuchen die Website TripCase nicht schaden Ihrem Gerät in irgendeiner Weise oder erkennen Sie persönlich als Individuum, sondern nur erkennt das Gerät oder Browser Sie verwenden. Cookies platziert, wenn Sie besuchen die Website TripCase speichern keine Ihrer persönlichen oder vertraulichen Informationen (z. B. Ihren Namen, Ihre E-Mail-Adresse oder Reise-Details).</p>
+			</div>			
+			<div id="pp2">
+				<p>3.	Verwalten von Cookies
+				o	Was passiert, wenn ich keine Cookies zulassen?
+				Wenn Cookies nicht auf Ihrem Gerät aktiviert sind, könnten Sie Ihre Erfahrungen mit dem Service oder der Zugriff auf den Dienst beschränkt (zum Beispiel, können Sie nicht alle werden die Funktionen des Dienstes zu nutzen oder auf den Dienst zugreifen über einen Browser) werden.
+				o	Wie kann ich deaktivieren / aktivieren Cookies?
+				Sie können deaktivieren / aktivieren Cookies über Ihren Internet-Browser oder über Einstellungen auf Ihrem mobilen Gerät. Wir haben erklärt, wie Sie können dies über einige der wichtigsten Internet-Browsern unten tun.
+				</p>
+			</div>			
+				<h4>Safari</h4>
+			<div id="pp2">
+				<p>1.	Im Tools-Menü, wählen Sie "Einstellungen"
+				2.	Wählen Sie das Symbol "Datenschutz"
+				3.	Dies öffnet Möglichkeiten für Cookies und Sie können wählen, zu aktivieren oder deaktivieren, indem Sie auf das Kontrollkästchen.
+				</p>
+			</div>
+				<h4>Google Chrome</h4>
+			<div id="pp2">
+				<p>4.	Im Einstellungsmenü, wählen Sie "Erweiterte Einstellungen anzeigen" am unteren Rand der Seite
+				5.	Wählen Sie den "Content-Einstellungen" im Bereich Datenschutz
+				6.	Der obere Bereich der Seite, die erscheint dann informiert Sie über Cookies und ermöglicht es Ihnen, die Cookies Sie eingestellt. Es erlaubt Ihnen auch, um alle derzeit gespeicherten Cookies zu löschen.
+				</p>
+			</div>			
+				<h4>Mozilla Firefox</h4>
+			<div id="pp2">
+				<p>7.	Im Tools-Menü, wählen Sie "Optionen"
+				8.	Wählen Sie die Registerkarte Datenschutz in der Optionen-Box
+				9.	Aus dem Dropdown wählen, "Benutzerdefinierte Einstellungen verwenden für Geschichte". Dadurch öffnet sich die Optionen für Cookies und Sie können wählen, zu aktivieren oder zu deaktivieren, indem Sie das Kontrollkästchen.
+				</p>
+			</div>			
+				<h4>Internet Explorer 6+</h4>
+			<div id="pp2">
+				<p>10.	Im Tools-Menü, wählen Sie "Internetoptionen" 
+				11.	Klicken Sie auf die Registerkarte "Datenschutz" 
+				12.	Sie sehen eine Privatsphäre-Einstellungen Schieber, der sechs Einstellungen, die Ihnen die Anzahl der Cookies, die platziert werden soll steuern können muss: Alle Cookies sperren, Hoch, Mittel Hoch, Mittel (Standardstufe), Niedrig und Alle Cookies annehmen.
+				</p>
+			</div>
+				<h4>Kinder unter dem Alter von 14</h4>
+			<div id="pp2">
+				<p>Der Service ist auch für Kinder unter 14 Jahren bestimmt. Wir sammeln nicht wissentlich persönliche Daten von Kindern unter 14 Jahren. In dem Fall, dass wir lernen, dass wir persönliche Daten von Kindern unter 14 Jahren gesammelt ohne Überprüfung der elterlichen Zustimmung, werden wir Maßnahmen ergreifen, um diese persönlichen Informationen so schnell wie möglich zu löschen.</p>
+			</div>			
+			<h4>Änderungen an unserer Datenschutzerklärung</h4>
+			<div id="pp2">
+				<p>Es ist unsere Politik, um die Änderungen, die wir an unseren Datenschutzbestimmungen auf dieser Seite veröffentlichen. Das Datum der Datenschutzerklärung letzten Überarbeitung wird an der Spitze der Datenschutzerklärung identifiziert.</p>
+			</div>
+				<h4>Kontakt-Informationen</h4>
+			<div id="pp2">
+				<p>Bitte richten Sie Fragen oder Anmerkungen zu dieser Datenschutzerklärung und unsere Datenschutzpraxis Sie uns an:</p>
+			</div>
+			<div id="pp2">
+				<p>Bitte richten Sie Fragen oder Anmerkungen zu dieser Datenschutzerklärung und unsere Datenschutzpraxis Sie uns an:</p>
+			</div>
+			<div id="pp2">
+				<p>•	privacy@fluentspeaking.com; or</p>
+			</div>
+			<div id="pp2">
+				<p>•	LANGUACOM GbR, Fasanenweg 5, 70771 Leinfelden-Echterdingen, Deutschland-Privacy Office.</p>
+			</div>
+		</article>	
+	</section>
+
+	<footer> <!--footer-->
+		<div id="footer_wrap"> 
+			<div id="footer_content">
+				<div class="logo-tel">
+					<div id="footer_logo_img"></div>
+					<div id="footer-phone"><img class="country_flags" id="flag-eeuu" src="../img/de.png" alt="(DE Flag)"><span id="phone_number">+49 711 59600-662</span></div>
+				</div>	
+				<div class="social-icons">
+					<div id="letras">
+					</div>
+					<div id="iconos">	
+						<div id="fb">
+							<a href="http://www.facebook.com/FluentSpeaking">
+								<img src="../img/fb.png" width="38" height="38" >
+							</a>
+						</div>
+						<div id="tw">
+							<a href="http://twitter.com/#!/FluentSpeaking">
+								<img src="../img/tw.png" width="35" height="35" >
+							</a>
+						</div>
+						<div id="gp">
+							<a href="https://plus.google.com/11779826902388336983/posts">
+								<img src="../img/g+.png" width="35" height="35" >
+							</a>
+						</div>
+					</div>	
+				</div>
+				<div class="copy">
+					<p id="fs-copyright">
+					    Urheberrecht © 2013 FluentSpeaking. Alle Rechte vorbehalten.
+					</p>
+				</div>
+			</div>	
+		</div>		
+	</footer>
+
+</body>
+</html>

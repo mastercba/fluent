@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>FluentSpeaking</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css"/>
+	<link rel="shortcut icon" href="../img/favicon.ico">
+
+	<script src="../js/prefixfree.min.js"></script>
+	<script src="../js/jquery.js"></script>
+	<!--<script src="js/codiguito.js"></script> -->
+
+	<!--<muestra el banner>-->
+	<script type="text/javascript">
+				$( function(){   
+				    //Muestro el primer div
+				    $("#fotos div:eq(0)").show();
+				    //cada 2 segundo ejecuto la función mostrar()
+				    setInterval("mostrar1()",7000);
+				});
+				mostrar1 = function(){
+				    //Oculto el div que se encuentra vivisble
+				    var div = $("#fotos div:visible").hide();
+				    //Selecciono el siguiente div que oculte en el paso anterior
+				    divNext = div.next();
+				    //Si existe otro div después lo muestro, si no existe quiere decir que es el último, entonces muestro el primero para que la próxima vez que se ejecute la función continue con el segundo
+				    if(divNext.length){
+				        divNext.show();
+				    } else {
+				        $("#fotos div:eq(0)").show();
+				    }
+				};
+	</script>
+
+	<!--<muestra el testimonio>-->
+	<script type="text/javascript">
+				$( function(){   
+				    //Muestro el primer div
+				    $("#columnas div:eq(0)").show();
+				    //cada 2 segundo ejecuto la función mostrar()
+				    setInterval("mostrar()",5000);
+				});
+				mostrar = function(){
+				    //Oculto el div que se encuentra vivisble
+				    var div = $("#columnas div:visible").hide();
+				    //Selecciono el siguiente div que oculte en el paso anterior
+				    divNext = div.next();
+				    //Si existe otro div después lo muestro, si no existe quiere decir que es el último, entonces muestro el primero para que la próxima vez que se ejecute la función continue con el segundo
+				    if(divNext.length){
+				        divNext.show();
+				    } else {
+				        $("#columnas div:eq(0)").show();
+				    }
+				};
+	</script>
+
+	<!--<formulario para information>-->
+	<script>
+		$(document).ready(function() {
+		    $('#showlogin').click(function() {
+		        $('#loginpanel').slideToggle('fast', function() {
+		            $("#triangle_down").toggle(); 
+		            $("#triangle_up").toggle();
+		        });
+		    });
+			$('#nombre').focus(function(){  
+				$(this).val('');   
+			});  
+			$('#apellido').focus(function(){  
+				$(this).val('');  
+			});
+			$('#email').focus(function(){  
+				$(this).val('');  
+			});
+			$('#deseo').focus(function(){  
+				$(this).val('');  
+			});
+		});
+	</script>
+
+</head>
+
+<body class="pp">
+	<header>
+		<div id="up_menu"><!--<menu superior>-->
+				<div id="menu">
+			    	<a href="en-soporte.html"> Contact Us </a>|
+			    	<a href="en-qsomos.html"> About Us</a>|
+			    	<!--<a href="certifica.html"> Certificaciones </a>|-->
+			    	<a href="#" id="actual_top"> Privacy Policy </a>|
+			    	<a href="../../formlogin.html"> Enter </a>
+				</div>         
+			</div>
+
+		<div id="logo"><!--<logo>-->
+			<a style="text-decoration: none; margin-left: 12px;" href="http://www.fluentspeaking.com" title="FluentSpeaking">
+			    <img style="margin-top: 2px;" src="../img/logo_last.png" alt="FS-logo">
+			</a>
+		</div>
+
+		<div id="lang"><!--<cambio de idioma>-->
+			<div id="lang-wrapper">
+			    <a style=" text-decoration: none; margin-left: 12px;" href="../../index.php" title="Aleman">
+			        <img style="margin-top: 2px; opacity:0.2;" src="../img/de.png" width="18" height="18" alt="Deutsch-logo">
+			    </a>
+			    <a style=" text-decoration: none;margin-left: 8px;" href="../../indexen.php" title="Ingles">
+			        <img style="margin-top: 2px; " src="../img/uk.png" width="18" height="18" alt="Englisch-logo">
+			    </a>
+			    <a style=" text-decoration: none; margin-left: 5px;" href="../../indexes.php" title="Español">
+			        <img style="margin-top: 2px; opacity:0.2;" src="../img/sp.png" width="20" height="20" alt="Español-logo">
+			    </a>
+			</div>        
+		</div>
+
+		<div id="logolangua"><!--<languacom group>-->
+			
+			<a href="http://www.languacom.de"><img src="../img/logolanguagroup.png"></a>
+		</div>
+		
+					<hgroup><!--<menu>-->
+				<nav>
+					<ul>
+						<li><a href="../../indexen.php">Initiation</a></li>
+						<li><a href="../html/en-funciona.html">How it works</a></li>
+						<li><a href="#" >German Course</a>
+							<ul>
+								<li><a href="../html/en-alestesp.html">Students</a></li>
+								<li><a href="../html/en-alprivesp.html">Private</a></li>
+								<li><a href="../html/en-alempesp.html">Companies</a></li>
+							</ul>
+						</li>
+						<li><a href="#">English Course</a><!--<ensp.html>-->
+							<ul>
+								<li><a href="../html/en-examenes.html">Exam Preparation</a></li>
+								<li><a href="../html/en-inestesp.html">Students</a></li>
+								<li><a href="../html/en-inprivesp.html">Private</a></li>
+								<li><a href="../html/en-inempesp.html">Companies</a></li>
+							</ul>
+						</li>	
+						<li><a href="#">Spanish</a>
+							<ul>
+								<li><a href="../html/en-espturesp.html">Spanish for Tourism</a></li>
+								<li><a href="../html/en-espestesp.html">Students</a></li>
+								<li><a href="../html/en-espprivesp.html">Private</a></li>
+							</ul>
+						</li>
+						<li><a href="#">French Course</a>
+							<ul>
+								<li><a href="../html/en-frestesp.html">Students</a></li>
+								<li><a href="../html/en-frprivesp.html">Private</a></li>
+							</ul>
+						</li>
+					</ul>	
+				</nav>
+			</hgroup>
+
+	<section>
+		<div id="top_title">
+			<h15 id="top_font">Privacy Policy</h15>
+		</div>
+
+		<article id="legal_1">
+			<div id="pp2">
+				<p>FluentSpeaking (the “Service”) is a live language teaching service provider over VoIP and Online, available from FluentSpeaking and the German company LANGUACOM Management Academy for Global Communication GbR either online through our websites at www.FluentSpeaking.com , www.languacom.com or via our mobile application. FluentSpeaking provides users with the ability to integrate Live Language Training Service through a Personalized Language Teacher and Online Language Teaching Support through the “FluentSpeaking Online Language Teaching Centre”. It allows users to communicate with their Live Teachers via VoIP and Chatting, to share information regarding their language course, to post their own blog, to receive valuable informational updates about their progress of their Language / Communication Skills through Online Language Tests and Needs Analysis, to receive Online Materials, such as Multimedia, Video and Audio Material related to their language course.</p>
+			</div>	
+			<h4>Introduction</h4>
+			<div id="pp2">
+				<p>We respect your privacy and are committed to protect it. Please take a moment to familiarize yourself with our privacy practices. By accessing the Service, you agree to our privacy practices as set out in this privacy statement.</p>
+			</div>
+			<div id="pp2">
+				<p>This statement describes the information that we collect and how that information may be used by us. This statement does not apply to information we collect through any other means, or to information collected on any other Company or third-party site that may link to or be accessible from the Service. We encourage you to learn about the privacy practices of those third parties.</p>
+			</div>
+			<div id="pp2">
+				<p>Our servers and data centers for the Service are located in Germany and the U.S. If you are accessing the Service from outside of Germany or the U.S., you agree that your personal information may be transferred to Germany or the U.S., a jurisdiction which may have different privacy and data security protections than those of your own jurisdiction, to be processed and stored.</p>
+			</div>
+			<h4>Collection of Personal Information</h4>
+			<div id="pp2">
+				<p>Personal information is data that can be used to uniquely identify or contact a single person. We collect several types of personal information from and about users of the Service, including:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Personal information you provide to us when you register for the Service, such as your name and email address;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Personal information provided to us prior to your registration with the Service by a Language Teaching company (such as a Partner Language Institute, Private or State School or Customer´s company, etc.) with which you have arranged the language course;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Personal information included in any messaging you undertake through the Service, such as sharing of language teaching-related information; and</p>
+			</div>
+			<div id="pp2">
+				<p>•	If you contact us, personal information you provide to us that details the nature of your question or problem.</p>
+			</div>
+				<h4>Use of Personal Information</h4>
+			<div id="pp2">
+				<p>We use personal information in the following ways:</p>
+			</div>
+			<div id="pp2">
+				<p>•	To present the Service and its contents in a suitable and effective manner for you and for your computer or mobile device;</p>
+			</div>
+			<div id="pp2">
+				<p>•	To provide you with information, products or services that you request from us;</p>
+			</div>
+			<div id="pp2">
+				<p>•	To notify you about changes to the Service; and</p>
+			</div>
+			<div id="pp2">
+				<p>•	To allow you to utilize the Language Teaching integration, sharing, and messaging features of the Service, if and when you choose to do so.</p>
+			</div>
+			<h4>Disclosure of Personal Information to Third Parties</h4>
+			<div id="pp2">
+				<p>We may from time-to-time make certain personal information available to strategic partners that work with the Company such as the following:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Various subsidiaries of the Company that support the Service;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Service providers we use to support our business who provide services such as information processing, managing and enhancing customer data, providing customer service, assessing your interest in our products and services, and conducting customer research or satisfaction surveys; and</p>
+			</div>
+			<div id="pp2">
+				<p>•	In the event of merger, acquisition, or any form of sale of some or all of the Company’s assets, in which case personal information held by the Company about its customers will be among the assets transferred to the buyer.</p>
+			</div>
+			<div id="pp2">
+				<p>•	If you contact us, personal information you provide to us that details the nature of your question or problem.</p>
+			</div>
+			<div id="pp2">
+				<p>We may also disclose your personal information to third parties to:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Comply with any court order or other legal obligation;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Enforce or apply our terms of use and any other agreements; or</p>
+			</div>
+			<div id="pp2">
+				<p>•	Protect the rights, property, or safety of the Company, our customers, or others. This may include exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</p>
+			</div>
+				<h4>Collection and Use of Non-Personal Information</h4>
+			<div id="pp2">
+				<p>We also collect non-personal information, or data in a form that cannot be used to uniquely identify or contact a single person. We may collect, use, transfer, and disclose non-personal information for any purposes. Non-personal information that we collect may include information regarding your activities on our website or our application, which may be aggregated and used to help us provide more useful information to our customers and to understand which parts of the Service are of most interest.</p>
+			</div>
+			<div id="pp2">
+				<p>If we combine non-personal information with personal information the combined information will be treated as personal information for the purposes of this Privacy Statement.</p>
+			</div>
+				<h4>Location-Based Services</h4>
+			<div id="pp2">
+				<p>To provide location-based services to mobile application users of the Service, the Company or our partners may collect and use precise location data, such as the real-time geographic location of your device. This location data is collected anonymously in a form that does not personally identify you and is used by the Company and our partners to provide location-based products and services. We treat this location data as non-personal information.</p>
+			</div>
+				<h4>Cookies and Other Technologies</h4>
+			<div id="pp2">
+				<p>The FluentSpeaking website, mobile application, email messages, and advertisements may use “cookies” and other technologies such as pixel tags and web beacons. These technologies help us to improve and to deliver a better and more personalized service by enabling us to:</p>
+			</div>
+			<div id="pp2">
+				<p>•	Estimate our audience size and usage patterns;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Store information about your preferences, allowing us to customize the Service according to your individual interests;</p>
+			</div>
+			<div id="pp2">
+				<p>•	Speed up your searches; and</p>
+			</div>
+			<div id="pp2">
+				<p>•	Recognize you when you return to the Service’s online website.</p>
+			</div>
+			<div id="pp2">
+				<p>You may refuse to accept cookies by activating the appropriate settings on your browser. Check with your provider to find out how to disable cookies. For further details about how we utilize cookies and how to deactivate cookies, please see our below the Cookies Policy. Please note that certain features of the Service will not be available once cookies are disabled.</p>
+			</div>
+			<div id="pp2">
+				<p>We treat information collected by cookies and other technologies as non-personal information. However, to the extent that Internet Protocol (IP) addresses or similar identifiers are considered personal information by local law, we treat these identifiers as personal information. Similarly, to the extent that non-personal information is combined with personal information, we treat the combined information as personal information for the purposes of this Privacy Statement.</p>
+			</div>
+				<h4>Data Security</h4>
+			<div id="pp2">
+				<p>We have implemented reasonable measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration and disclosure.</p>
+			</div>
+			<div id="pp2">
+				<p>The safety and security of your information also depends on you. We urge you to be careful about giving out information in public areas of the Service. You understand and acknowledge that, even after removal, copies of your content, including personal information, that you contribute to be shared, published or displayed on the Service, or transmitted to other users of the Service, may remain viewable in cached and archived pages, or might have been copied or stored by other users. Although we take efforts to protect your personal information, we cannot guarantee the security of your personal information transmitted to the Service. Any transmission of personal information is at your own risk.</p>
+			</div>	
+				<h4>Cookies Policy</h4>		
+			<div id="pp2">
+				<p>1.	What is a cookie?
+				A cookie is a piece of data that is stored on a computer, tablet or other device (“device”) used to browse the Internet so that that device can be recognized at a later time.
+				It is your choice whether or not you allow cookies to be placed on your device. For specific information about managing and controlling cookies, please refer to Managing cookies below. 
+				</p>
+			</div>	
+			<div id="pp2">
+				<p>2.	Our cookies policy
+				The TripCase service (the “service”) attempts to place certain cookies on your device when you visit the TripCase site. We have listed for you below the types of cookies we use, and what we use them for:
+				</p>
+			</div>
+			<div id="pp2">
+				<p>Cookie Type	Cookie purpose
+				Session cookies	These cookies are used to track your session state as you interact with the service.
+				Identity cookies These cookies are set at your request to have the application remember you the next time you return to the service using the device.
+				Optimization cookies	These cookies are used to track usage of the services we offer in order to improve the usability of our service.
+				</p>
+			</div>			
+			<div id="pp2">
+				<p>In order to fully-utilize the service, your device should be set to accept cookies, as much of the service functionality only works via the use of cookies. Cookies placed when you visit the TripCase site do not harm your device in any way or recognize you personally as an individual; they only recognize the device or browser you are using. Cookies placed when you visit the TripCase site do not store any of your personal or sensitive information (such as your name, email address or travel details).</p>
+			</div>			
+			<div id="pp2">
+				<p>3.	Managing cookies
+				o	What happens if I don’t allow cookies?
+				If cookies aren’t enabled on your device, your experience with the service or access to the service could be limited (for instance, you may not be use all the features of the service or access the service via a browser). 
+				o	How do I disable/enable cookies?
+				You can disable/enable cookies via your Internet browser or via settings on your mobile device. We have explained how you may do this via some of the main Internet browsers below. 
+				</p>
+			</div>			
+				<h4>Safari</h4>
+			<div id="pp2">
+				<p>1.	In the tools menu, select “preferences”
+				2.	Select the “privacy” icon
+				3.	This will bring up options for cookies and you can choose to enable or disable them by clicking on the checkbox.
+				</p>
+			</div>
+				<h4>Google Chrome</h4>
+			<div id="pp2">
+				<p>4.	In the settings menu, select “show advanced settings” at the bottom of the page
+				5.	Select the “content settings” button in the privacy section
+				6.	The top section of the page that then appears tells you about cookies and allows you to set the cookies you want. It also allows you to clear any cookies currently stored.
+				</p>
+			</div>			
+				<h4>Mozilla Firefox</h4>
+			<div id="pp2">
+				<p>7.	In the tools menu, select “options”
+				8.	Select the privacy tab in the options box
+				9.	From the dropdown choose, “Use Custom Settings for History”. This will bring up the options for cookies and you can choose to enable or disable them by clicking the checkbox.
+				</p>
+			</div>			
+				<h4>Internet Explorer 6+</h4>
+			<div id="pp2">
+				<p>10.	In the tools menu, select “Internet Options” 
+				11.	Click the “privacy” tab 
+				12.	You will see a privacy settings slider which has six settings that allow you to control the number of cookies that will be placed: Block All Cookies, High, Medium High, Medium (default level), Low, and Accept All Cookies. 
+				</p>
+			</div>
+				<h4>Children under the Age of 14</h4>
+			<div id="pp2">
+				<p>The Service is also intended for children under 14 years of age. We do not knowingly collect personal information from children under age 14. In the event that we learn that we have collected personal information from a child under age 14 without verification of parental consent, we will take steps to delete that personal information as soon as possible.</p>
+			</div>			
+			<h4>Changes to Our Privacy Statement</h4>
+			<div id="pp2">
+				<p>It is our policy to post any changes we make to our privacy practices on this page. The date the privacy statement was last revised is identified at the top of the privacy statement.</p>
+			</div>
+				<h4>Contact Information</h4>
+			<div id="pp2">
+				<p>Please direct any questions or comments about this privacy statement and our privacy practices to us at:</p>
+			</div>
+			<div id="pp2">
+				<p>Please direct any questions or comments about this privacy statement and our privacy practices to us at:</p>
+			</div>
+			<div id="pp2">
+				<p>•	privacy@fluentspeaking.com; or</p>
+			</div>
+			<div id="pp2">
+				<p>•	LANGUACOM GbR, Fasanenweg 5, 70771 Leinfelden-Echterdingen, Germany- Privacy Office.</p>
+			</div>
+		</article>	
+	</section>
+
+	<footer> <!--footer-->
+		<div id="footer_wrap"> 
+			<div id="footer_content">
+				<div class="logo-tel">
+					<div id="footer_logo_img"></div>
+					<div id="footer-phone"><img class="country_flags" id="flag-eeuu" src="../img/de.png" alt="(DE Flag)"><span id="phone_number">+49 711 59600-662</span></div>
+				</div>	
+				<div class="social-icons">
+					<div id="letras">
+					</div>
+					<div id="iconos">	
+						<div id="fb">
+							<a href="http://www.facebook.com/FluentSpeaking">
+								<img src="../img/fb.png" width="38" height="38" >
+							</a>
+						</div>
+						<div id="tw">
+							<a href="http://twitter.com/#!/FluentSpeaking">
+								<img src="../img/tw.png" width="35" height="35" >
+							</a>
+						</div>
+						<div id="gp">
+							<a href="https://plus.google.com/11779826902388336983/posts">
+								<img src="../img/g+.png" width="35" height="35" >
+							</a>
+						</div>
+					</div>	
+				</div>
+				<div class="copy">
+					<p id="fs-copyright">
+					    Copyright © 2013 FluentSpeaking. All rights reserved.
+					</p>
+				</div>
+			</div>	
+		</div>		
+	</footer>
+
+</body>
+</html>
